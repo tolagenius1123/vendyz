@@ -1,0 +1,8 @@
+.overview-icon {
+	color: #9b9697; /* Default color */
+	transition: color 0.3s ease; /* Smooth transition */
+}
+
+.overview-icon:hover {
+	color: #5271ff; /* Hover color */
+}
