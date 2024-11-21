@@ -1,5 +1,5 @@
 "use client";
-import { Dispatch, SetStateAction, useState } from "react";
+import { Dispatch, SetStateAction } from "react";
 import { VendyzIcon } from "@/assets/icons";
 import CustomButton from "@/components/CustomButton";
 import {
@@ -18,11 +18,10 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 
 type AddPostProps = {
-	isModalOpen?: boolean;
 	setIsModalOpen: Dispatch<SetStateAction<boolean>>;
 };
 
-const AddPost = ({ isModalOpen, setIsModalOpen }: AddPostProps) => {
+const AddPost = ({ setIsModalOpen }: AddPostProps) => {
 	const { toast } = useToast();
 	const isLoading = useAppSelector((state) => state.loading.isLoading);
 	const dispatch = useAppDispatch();
@@ -35,13 +34,12 @@ const AddPost = ({ isModalOpen, setIsModalOpen }: AddPostProps) => {
 	const {
 		register,
 		handleSubmit,
-		watch,
 		formState: { errors },
-	} = useForm({
+	} = useForm<{ title: string; description: string }>({
 		resolver: zodResolver(schema),
 	});
 
-	const onSubmit = async (data: any) => {
+	const onSubmit = async (data: { title: string; description: string }) => {
 		dispatch(startLoading());
 		const payload = {
 			title: data.title,
@@ -59,6 +57,7 @@ const AddPost = ({ isModalOpen, setIsModalOpen }: AddPostProps) => {
 				});
 			}
 		} catch (error) {
+			console.log(error);
 			setIsModalOpen(false);
 			dispatch(stopLoading());
 			toast({

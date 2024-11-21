@@ -1,14 +1,13 @@
 type TransactionsIconProps = {
 	width: string;
 	height: string;
-	styles?: string;
 };
 
-const TransactionsIcon = ({ width, height, styles }: TransactionsIconProps) => (
+const TransactionsIcon = ({ width, height }: TransactionsIconProps) => (
 	<svg
 		xmlns="http://www.w3.org/2000/svg"
-		width="20"
-		height="20"
+		width={width}
+		height={height}
 		fill="none"
 		viewBox="0 0 20 20"
 	>
