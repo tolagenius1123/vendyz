@@ -3,6 +3,7 @@ import { useState } from "react";
 import {
 	ArrowDownIcon,
 	ArrowUpIcon,
+	Fan,
 	NairaIcon,
 	NairaIconBlack,
 	RainbowIcon,
@@ -13,12 +14,13 @@ import { Dialog, DialogTrigger } from "@/components/ui/dialog";
 import Image from "next/image";
 import PostsTable from "./_components/posts/page";
 import AddPost from "./_components/posts/add-post";
+import { Product } from "@/assets/images";
 
 const Dashboard = () => {
 	const [isModalOpen, setIsModalOpen] = useState(false);
 
 	return (
-		<div className="w-full h-full flex flex-col md:flex-row justify-between gap-10">
+		<div className="w-full h-full flex flex-col md:flex-row justify-between gap-[300px] md:gap-10">
 			<div className="w-full md:w-[70%] h-auto rounded-lg">
 				{/* CARDS */}
 				<div className="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -184,7 +186,202 @@ const Dashboard = () => {
 					<PostsTable />
 				</div>
 			</div>
-			<div className="w-full md:w-[30%] h-full border rounded-lg"></div>
+			<div className="w-full md:w-[30%] h-auto">
+				<div className="w-full p-4 flex flex-col gap-2 rounded-[20px] bg-lightGrey shadow-md">
+					<div className="flex flex-col gap-4">
+						<div className="flex items-center justify-between">
+							<p className="text-[#5C5959] text-sm">
+								Vendyz earnings
+							</p>
+							<button className="bg-[#FAFAFA] text-sm hover:bg-slate-100 rounded-[20px] text-[#5C5959] py-1 px-3 border border-[#F0F0F0] cursor-pointer shadow-sm">
+								View More
+							</button>
+						</div>
+						<div className="flex gap-2">
+							<div className="text-black text-lg">47</div>
+							<div className="text-customGrey text-[14px] mt-2">
+								/1,305 orders
+							</div>
+						</div>
+					</div>
+					<div className="my-3 h-[1px] w-full bg-zinc-200"></div>
+					<div className="flex justify-end">
+						<div className="flex flex-col gap-4">
+							<div className="flex items-center justify-between">
+								<p className="text-[#5C5959] text-sm">
+									Resolved
+								</p>
+							</div>
+							<div className="flex gap-2">
+								<div className="text-black text-lg">7</div>
+								<div className="text-customGrey text-[14px] mt-2">
+									/47 disputes
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div className="py-4 mt-5 w-full flex flex-col rounded-[20px] bg-white border border-zinc-200">
+					<div className="p-3 flex flex-col gap-4">
+						<div className="flex items-center justify-between">
+							<p className="text-[#5C5959] text-sm">Orders</p>
+							<button className="bg-[#FAFAFA] text-sm hover:bg-slate-100 rounded-[20px] text-[#5C5959] py-1 px-3 border border-[#F0F0F0] cursor-pointer shadow-sm">
+								View More
+							</button>
+						</div>
+					</div>
+					<div className="border-t border-b border-zinc-200 flex justify-between text-[10px] px-2 py-4">
+						<div className="flex gap-2">
+							<Image src={Fan} alt="product image" />
+							<div className="flex flex-col gap-1">
+								<p className="text-black">
+									Mainstays 12-inch 3-
+								</p>
+								<p className="text-[#5C5959]">N200,000.00</p>
+								<p className="text-[#9B9697]">Mooi Gadgets</p>
+							</div>
+						</div>
+						<button className="bg-[#F4F4F4] hover:bg-slate-100 rounded-[20px] text-[#5C5959] h-[25px] w-[80px] border border-[#F0F0F0] cursor-pointer shadow-sm">
+							Pending
+						</button>
+					</div>
+					<div className="border-t border-b border-zinc-200 flex justify-between text-[10px] px-2 py-4">
+						<div className="flex gap-2">
+							<Image src={Fan} alt="product image" />
+							<div className="flex flex-col gap-1">
+								<p className="text-black">
+									Mainstays 12-inch 3-
+								</p>
+								<p className="text-[#5C5959]">N200,000.00</p>
+								<p className="text-[#9B9697]">Mooi Gadgets</p>
+							</div>
+						</div>
+						<button className="bg-[#F4F4F4] hover:bg-slate-100 rounded-[20px] text-[#5C5959] h-[25px] w-[80px] border border-[#F0F0F0] cursor-pointer shadow-sm">
+							Pending
+						</button>
+					</div>
+					<div className="border-t border-b border-zinc-200 flex justify-between text-[10px] px-2 py-4">
+						<div className="flex gap-2">
+							<Image src={Fan} alt="product image" />
+							<div className="flex flex-col gap-1">
+								<p className="text-black">
+									Mainstays 12-inch 3-
+								</p>
+								<p className="text-[#5C5959]">N200,000.00</p>
+								<p className="text-[#9B9697]">Mooi Gadgets</p>
+							</div>
+						</div>
+						<button className="bg-[#F4F4F4] hover:bg-slate-100 rounded-[20px] text-[#5C5959] h-[25px] w-[80px] border border-[#F0F0F0] cursor-pointer shadow-sm">
+							Pending
+						</button>
+					</div>
+					<div className="border-t border-b border-zinc-200 flex justify-between text-[10px] px-2 py-4">
+						<div className="flex gap-2">
+							<Image src={Fan} alt="product image" />
+							<div className="flex flex-col gap-1">
+								<p className="text-black">
+									Mainstays 12-inch 3-
+								</p>
+								<p className="text-[#5C5959]">N200,000.00</p>
+								<p className="text-[#9B9697]">Mooi Gadgets</p>
+							</div>
+						</div>
+						<button className="bg-[#F4F4F4] hover:bg-slate-100 rounded-[20px] text-[#5C5959] h-[25px] w-[80px] border border-[#F0F0F0] cursor-pointer shadow-sm">
+							Pending
+						</button>
+					</div>
+					<div className="border-t border-b border-zinc-200 flex justify-between text-[10px] px-2 py-4">
+						<div className="flex gap-2">
+							<Image src={Fan} alt="product image" />
+							<div className="flex flex-col gap-1">
+								<p className="text-black">
+									Mainstays 12-inch 3-
+								</p>
+								<p className="text-[#5C5959]">N200,000.00</p>
+								<p className="text-[#9B9697]">Mooi Gadgets</p>
+							</div>
+						</div>
+						<button className="bg-[#F4F4F4] hover:bg-slate-100 rounded-[20px] text-[#5C5959] h-[25px] w-[80px] border border-[#F0F0F0] cursor-pointer shadow-sm">
+							Pending
+						</button>
+					</div>
+					<div className="border-t border-b border-zinc-200 flex justify-between text-[10px] px-2 py-4">
+						<div className="flex gap-2">
+							<Image src={Fan} alt="product image" />
+							<div className="flex flex-col gap-1">
+								<p className="text-black">
+									Mainstays 12-inch 3-
+								</p>
+								<p className="text-[#5C5959]">N200,000.00</p>
+								<p className="text-[#9B9697]">Mooi Gadgets</p>
+							</div>
+						</div>
+						<button className="bg-[#F4F4F4] hover:bg-slate-100 rounded-[20px] text-[#5C5959] h-[25px] w-[80px] border border-[#F0F0F0] cursor-pointer shadow-sm">
+							Pending
+						</button>
+					</div>
+					<div className="border-t border-b border-zinc-200 flex justify-between text-[10px] px-2 py-4">
+						<div className="flex gap-2">
+							<Image src={Fan} alt="product image" />
+							<div className="flex flex-col gap-1">
+								<p className="text-black">
+									Mainstays 12-inch 3-
+								</p>
+								<p className="text-[#5C5959]">N200,000.00</p>
+								<p className="text-[#9B9697]">Mooi Gadgets</p>
+							</div>
+						</div>
+						<button className="bg-[#F4F4F4] hover:bg-slate-100 rounded-[20px] text-[#5C5959] h-[25px] w-[80px] border border-[#F0F0F0] cursor-pointer shadow-sm">
+							Pending
+						</button>
+					</div>
+					<div className="border-t border-b border-zinc-200 flex justify-between text-[10px] px-2 py-4">
+						<div className="flex gap-2">
+							<Image src={Fan} alt="product image" />
+							<div className="flex flex-col gap-1">
+								<p className="text-black">
+									Mainstays 12-inch 3-
+								</p>
+								<p className="text-[#5C5959]">N200,000.00</p>
+								<p className="text-[#9B9697]">Mooi Gadgets</p>
+							</div>
+						</div>
+						<button className="bg-[#F4F4F4] hover:bg-slate-100 rounded-[20px] text-[#5C5959] h-[25px] w-[80px] border border-[#F0F0F0] cursor-pointer shadow-sm">
+							Pending
+						</button>
+					</div>
+					<div className="border-t border-b border-zinc-200 flex justify-between text-[10px] px-2 py-4">
+						<div className="flex gap-2">
+							<Image src={Fan} alt="product image" />
+							<div className="flex flex-col gap-1">
+								<p className="text-black">
+									Mainstays 12-inch 3-
+								</p>
+								<p className="text-[#5C5959]">N200,000.00</p>
+								<p className="text-[#9B9697]">Mooi Gadgets</p>
+							</div>
+						</div>
+						<button className="bg-[#F4F4F4] hover:bg-slate-100 rounded-[20px] text-[#5C5959] h-[25px] w-[80px] border border-[#F0F0F0] cursor-pointer shadow-sm">
+							Pending
+						</button>
+					</div>
+					<div className="border-t border-b border-zinc-200 flex justify-between text-[10px] px-2 py-4">
+						<div className="flex gap-2">
+							<Image src={Fan} alt="product image" />
+							<div className="flex flex-col gap-1">
+								<p className="text-black">
+									Mainstays 12-inch 3-
+								</p>
+								<p className="text-[#5C5959]">N200,000.00</p>
+								<p className="text-[#9B9697]">Mooi Gadgets</p>
+							</div>
+						</div>
+						<button className="bg-[#F4F4F4] hover:bg-slate-100 rounded-[20px] text-[#5C5959] h-[25px] w-[80px] border border-[#F0F0F0] cursor-pointer shadow-sm">
+							Pending
+						</button>
+					</div>
+				</div>
+			</div>
 		</div>
 	);
 };

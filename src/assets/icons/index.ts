@@ -15,6 +15,7 @@ import RainbowIcon from "./rainbow.svg";
 import RainbowLeftIcon from "./rainbow-left.svg";
 import RainbowRightIcon from "./rainbow-right.svg";
 import MoreIcon from "./more-circle.svg";
+import Fan from "./fan.svg";
 
 export {
 	MobileIcon,
@@ -34,4 +35,5 @@ export {
 	RainbowLeftIcon,
 	RainbowRightIcon,
 	MoreIcon,
+	Fan,
 };

@@ -35,6 +35,7 @@ const AddPost = ({ setIsModalOpen }: AddPostProps) => {
 		register,
 		handleSubmit,
 		formState: { errors },
+		reset,
 	} = useForm<{ title: string; description: string }>({
 		resolver: zodResolver(schema),
 	});
@@ -49,6 +50,7 @@ const AddPost = ({ setIsModalOpen }: AddPostProps) => {
 		try {
 			const res = await addPost(payload);
 			if (res.status === 201) {
+				reset();
 				setIsModalOpen(false);
 				dispatch(stopLoading());
 				toast({

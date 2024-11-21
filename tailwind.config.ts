@@ -52,6 +52,7 @@ export default {
 				},
 				customBlue: "#5271FF",
 				customGrey: "#9B9697",
+				lightGrey: "#FAFAFA",
 			},
 			borderRadius: {
 				lg: "var(--radius)",
