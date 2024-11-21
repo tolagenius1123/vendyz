@@ -35,7 +35,7 @@ import { useEffect, useState } from "react";
 
 const Sidebar = () => {
 	const pathname = usePathname();
-	const [user, setUser] = useState<any>();
+	const [user, setUser] = useState<{ email: string; password: string }>();
 	const router = useRouter();
 	const isLoading = useAppSelector((state) => state.loading.isLoading);
 	const dispatch = useAppDispatch();
@@ -111,7 +111,7 @@ const Sidebar = () => {
 						))}
 					</div>
 				</div>
-				<div className="px-4 py-4 border-t border-b flex justify-between items-center mb-5">
+				<div className="px-4 py-3 border-t border-b flex justify-between items-center mb-5">
 					<div className="flex gap-2 items-center">
 						<CircleUserRound className="h-8 w-8" />
 						<div className="flex flex-col">
@@ -121,7 +121,7 @@ const Sidebar = () => {
 							<p className="text-[#9B9697] text-[12px]">Admin</p>
 						</div>
 					</div>
-
+					{/* LOGOUT */}
 					<DropdownMenu>
 						<DropdownMenuTrigger>
 							<Image

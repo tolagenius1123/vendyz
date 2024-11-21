@@ -40,7 +40,7 @@ const LoginForm = () => {
 		handleSubmit,
 		watch,
 		formState: { errors },
-	} = useForm({
+	} = useForm<{ emailAddress: string; password: string }>({
 		resolver: zodResolver(schema),
 	});
 
@@ -51,7 +51,10 @@ const LoginForm = () => {
 		!watchAllFields.password ||
 		Object.keys(errors).length > 0;
 
-	const onSubmit = async (data: any) => {
+	const onSubmit = async (data: {
+		emailAddress: string;
+		password: string;
+	}) => {
 		dispatch(startLoading());
 		const payload = {
 			email: data.emailAddress,
@@ -127,7 +130,7 @@ const LoginForm = () => {
 			</div>
 			<div className="mt-2 flex justify-end">
 				<div className="text-sm">
-					Don't have an account?{" "}
+					Don&apos;t have an account?{" "}
 					<Link href="/" className="text-customBlue cursor-pointer">
 						Sign Up
 					</Link>

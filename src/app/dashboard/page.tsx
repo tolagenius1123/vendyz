@@ -175,10 +175,7 @@ const Dashboard = () => {
 								</button>
 							</DialogTrigger>
 							{/* ADD POST FORM */}
-							<AddPost
-								isModalOpen={isModalOpen}
-								setIsModalOpen={setIsModalOpen}
-							/>
+							<AddPost setIsModalOpen={setIsModalOpen} />
 						</Dialog>
 					</div>
 					<PostsTable />
