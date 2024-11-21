@@ -1,5 +1,4 @@
 import axios from "axios";
-import { AppConfig } from "..";
 
 export const getPosts = async () => {
 	try {
@@ -15,7 +14,11 @@ export const getPosts = async () => {
 
 export const addPost = async (payload: { title: string; body: string }) => {
 	try {
-		const response = await axios.post(`${AppConfig.POST_URL}`, payload);
+		// const response = await axios.post(`${AppConfig.POST_URL}`, payload);
+		const response = await axios.post(
+			`https://jsonplaceholder.typicode.com/posts`,
+			payload
+		);
 		return response;
 	} catch (error) {
 		throw error;
