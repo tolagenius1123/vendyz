@@ -15,7 +15,7 @@ import PostsTable from "./_components/posts/page";
 import AddPost from "./_components/posts/add-post";
 
 const Dashboard = () => {
-	const [isModalOpen, setIsModalOpen] = useState(true);
+	const [isModalOpen, setIsModalOpen] = useState(false);
 
 	return (
 		<div className="w-full h-full flex flex-col md:flex-row justify-between gap-10">
@@ -170,7 +170,10 @@ const Dashboard = () => {
 							onOpenChange={setIsModalOpen}
 						>
 							<DialogTrigger asChild>
-								<button className="bg-[#FAFAFA] hover:bg-slate-100 rounded-[20px] text-[#5C5959] py-2 px-4 border border-[#F0F0F0] cursor-pointer shadow-sm">
+								<button
+									onClick={() => setIsModalOpen(true)}
+									className="bg-[#FAFAFA] hover:bg-slate-100 rounded-[20px] text-[#5C5959] py-2 px-4 border border-[#F0F0F0] cursor-pointer shadow-sm"
+								>
 									+ Add Post
 								</button>
 							</DialogTrigger>
