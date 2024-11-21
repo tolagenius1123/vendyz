@@ -19,7 +19,7 @@ const Dashboard = () => {
 	const [isModalOpen, setIsModalOpen] = useState(false);
 
 	return (
-		<div className="w-full h-full flex flex-col md:flex-row justify-between gap-[300px] md:gap-10">
+		<div className="w-full h-auto flex flex-col md:flex-row justify-between gap-[800px] md:gap-10">
 			<div className="w-full md:w-[70%] h-auto rounded-lg">
 				{/* CARDS */}
 				<div className="grid grid-cols-1 md:grid-cols-2 gap-5">

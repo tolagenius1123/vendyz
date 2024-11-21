@@ -94,7 +94,6 @@ export default function MobileSideBar() {
 		const user = localStorage.getItem("user");
 		if (user) {
 			const userInfo = JSON.parse(user);
-			console.log(userInfo);
 			setUser(userInfo);
 		}
 	}, []);
