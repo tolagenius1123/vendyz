@@ -14,7 +14,6 @@ import { Dialog, DialogTrigger } from "@/components/ui/dialog";
 import Image from "next/image";
 import PostsTable from "./_components/posts/page";
 import AddPost from "./_components/posts/add-post";
-import { Product } from "@/assets/images";
 
 const Dashboard = () => {
 	const [isModalOpen, setIsModalOpen] = useState(false);
