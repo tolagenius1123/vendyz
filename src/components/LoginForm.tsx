@@ -27,14 +27,12 @@ const LoginForm = () => {
 			.refine((val) => val.includes("@") && val.endsWith(".com"), {
 				message: "Email must include '@' and end with '.com'",
 			}),
-		password: z
-			.string()
-			.min(1, { message: "Password is required" })
-			.min(6, { message: "Password must be more than 6 characters" })
-			.regex(/[!@#$%^&*(),.?":{}|<>]/, {
-				message: "Password must contain a special character",
-			})
-			.regex(/\d/, { message: "Password must contain a number" }),
+		password: z.string().min(1, { message: "Password is required" }),
+		// .min(6, { message: "Password must be more than 6 characters" })
+		// .regex(/[!@#$%^&*(),.?":{}|<>]/, {
+		// 	message: "Password must contain a special character",
+		// })
+		// .regex(/\d/, { message: "Password must contain a number" }),
 	});
 
 	const {
@@ -91,7 +89,7 @@ const LoginForm = () => {
 					name="emailAddress"
 					type="email"
 					placeholder="Enter a valid email"
-					className="text-sm rounded-lg h-[40px] border border-customBlue px-3 md:px-5 placeholder:text-sm focus:outline-none focus:ring-1 focus:ring-customBlue"
+					className="text-sm rounded-lg h-[40px] border border-customBlue px-3 md:px-3 placeholder:text-sm focus:outline-none focus:ring-1 focus:ring-customBlue"
 				/>
 				{errors.emailAddress && (
 					<p className="text-sm text-red-500">
@@ -111,7 +109,7 @@ const LoginForm = () => {
 					name="password"
 					type="password"
 					placeholder="Enter your password"
-					className="text-sm rounded-lg h-[40px] border border-customBlue px-3 md:px-5 placeholder:text-sm focus:outline-none focus:ring-1 focus:ring-customBlue"
+					className="text-sm rounded-lg h-[40px] border border-customBlue px-3 md:px-3 placeholder:text-sm focus:outline-none focus:ring-1 focus:ring-customBlue"
 				/>
 				{errors.password && (
 					<p className="text-sm text-red-500">

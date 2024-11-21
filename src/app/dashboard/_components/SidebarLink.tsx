@@ -1,6 +1,5 @@
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import React from "react";
 
 type SidebarLinkProps = {
 	href: string;
@@ -11,30 +10,30 @@ type SidebarLinkProps = {
 
 const SidebarLink = ({ href, label, icon, isActive }: SidebarLinkProps) => (
 	<Link href={href} className={cn("flex items-center gap-5 h-[44px] group")}>
-		<div
+		<span
 			className={cn(
 				"bg-transparent group-hover:bg-customBlue h-full w-1 rounded-r-md",
 				isActive ? "bg-customBlue" : "bg-transparent"
 			)}
-		></div>
-		<div className="flex items-center gap-3">
-			<div
+		></span>
+		<span className="flex items-center gap-3">
+			<span
 				className={cn(
 					"text-customGrey group-hover:text-customBlue",
 					isActive ? "text-customBlue" : "text-customGrey"
 				)}
 			>
 				{icon}
-			</div>
-			<p
+			</span>
+			<span
 				className={cn(
 					"text-[16px] font-medium text-customGrey group-hover:text-customBlue",
 					isActive ? "text-customBlue" : "text-customGrey"
 				)}
 			>
 				{label}
-			</p>
-		</div>
+			</span>
+		</span>
 	</Link>
 );
 

@@ -1,13 +1,13 @@
 import { NotificationsIcon, SettingsIcon } from "@/assets/images";
-import { MenuIcon } from "lucide-react";
 import Image from "next/image";
+import MobileSideBar from "./MobileSideBar";
 
 const Header = () => {
 	return (
 		<div className="h-[15%] bg-[#FAFAFA] px-6 flex justify-between items-center">
 			<div className="flex items-center gap-5">
-				<MenuIcon className="md:hidden" />
-				<h1 className="font-medium text-2xl">Overview</h1>
+				<MobileSideBar />
+				<h1 className="font-medium text-xl md:text-2xl">Overview</h1>
 			</div>
 			<div className="flex items-center gap-4">
 				<Image

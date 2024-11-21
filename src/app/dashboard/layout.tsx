@@ -11,7 +11,7 @@ export default function DashboardLayout({
 			<Sidebar />
 			<div className="w-full md:w-[80%] h-screen flex flex-col">
 				<Header />
-				<div className="h-[85%] p-4 overflow-y-scroll">{children}</div>
+				<div className="h-[85%] p-5 overflow-y-scroll">{children}</div>
 			</div>
 		</main>
 	);
